@@ -1,6 +1,6 @@
 def convert(user_input):
     # convert the emoticon here
-    user_input.replace(':)', 'str(🙂)')
+    user_input.replace(':)', str(':)'))
     print(user_input)
 
 def main():

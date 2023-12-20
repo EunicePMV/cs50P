@@ -9,6 +9,7 @@ while coke != 0:
     user_input = int(input('Insert a coin: '))
     if user_input == 25 or user_input == 10 or user_input == 5:
         amount_due = coke - user_input
+        if 
     else:
         continue
-    
+

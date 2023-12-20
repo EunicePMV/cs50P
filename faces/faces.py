@@ -1,18 +1,11 @@
 def convert(user_input):
-    # find the emoticon
-    index = user_input.find(':)') if  else user_input.find(':(')
-    print(index)
-
-    # if index != 0:
-    #     user_input[]
-
-    # # convert the emoticon into emoji
-
-    # # convert the emoticon here
-    # user_input.replace(')', '🙂')
-    # print(user_input)
-
-    # if there is ':)' replace the emoticon
+    if user_input.find(':)'):
+        user_input.replace
+        user_input[user_input.find(':)')] = '🙂'
+        user_input[user_input.find(':)') + 1] = ''
+    elif user_input.find(':('):
+        user_input[user_input.find(':(')] = '🙁'
+        user_input[user_input.find(':(') + 1] = ''
 
 
 def main():
@@ -20,4 +13,3 @@ def main():
     convert(user_input)
 
 main()
-

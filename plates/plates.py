@@ -19,7 +19,7 @@ def is_valid(s):
         for pos, letter in enumerate(s):
             if letter.isdigit():
                 sub_string = s[pos:]
-                print(sub_string.isdigit())
+                print(sub_string)
 
 
 

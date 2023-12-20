@@ -9,7 +9,7 @@ elif '.png' in user_input:
 elif '.pdf' in user_input:
     print('application/pdf')
 elif '.txt' in user_input:
-    print('application/txt')
+    print('text/plain')
 elif '.zip' in user_input:
     print('application/zip')
 else:

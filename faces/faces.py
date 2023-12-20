@@ -12,4 +12,8 @@ def main():
     user_input = input('Give me a word/sentence: ')
     convert(user_input)
 
-main()
+# main()
+
+
+user_input = input('Give me a word/sentence: ')
+print(user_input.replace(':)', '🙂'))

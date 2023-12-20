@@ -13,8 +13,7 @@ def main():
 
 def is_valid(s):
     if len(s) >= 2 and len(s) <= 6:
-        return False
-    elif
+        # check if s contain special 
 
 
 main()

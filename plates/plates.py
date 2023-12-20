@@ -3,10 +3,11 @@
 
 def main():
     plate = input("Plate: ")
-    if is_valid(plate):
-        print("Valid")
-    else:
-        print("Invalid")
+    is_valid(plate)
+    # if is_valid(plate):
+    #     print("Valid")
+    # else:
+    #     print("Invalid")
 
 
 def is_valid(s):
@@ -15,8 +16,12 @@ def is_valid(s):
         if special_char in s:
             return False
 
-        for letter in s:
-            
+        for pos, letter in enumerate(s):
+            if letter.isdigit():
+                sub_string = s[pos:]
+                print(sub_string.isdigit())
+
+
 
 
 main()

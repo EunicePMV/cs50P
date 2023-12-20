@@ -12,8 +12,10 @@ def main():
 
 
 def is_valid(s):
+    special_char = '. [@_!$%^&*()<>?/\\|}{~:]#'
     if len(s) >= 2 and len(s) <= 6:
-        # check if s contain special 
+        if special_char in s:
+            return False
 
 
 main()

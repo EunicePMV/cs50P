@@ -12,6 +12,7 @@ def main():
 
 def is_valid(s):
     special_char = '. [@_!$%^&*()<>?/\\|}{~:]#'
+    subtring = ''
     if len(s) >= 2 and len(s) <= 6:
         if special_char in s:
             return False
@@ -19,7 +20,8 @@ def is_valid(s):
         for pos, letter in enumerate(s):
             if letter.isdigit():
                 sub_string = s[pos:]
-                print(sub_string)
+                break
+        i
 
 
 

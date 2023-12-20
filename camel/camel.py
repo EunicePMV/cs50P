@@ -1,8 +1,3 @@
-# initialize empty string
-# loop over to the current string
-# find the uppercase letter
-# keep on adding char in the empty string
-
 user_input = input('Give me camel case: ')
 snake_case = ''
 

@@ -18,6 +18,8 @@ def is_valid(s):
 
         for pos, letter in enumerate(s):
             if letter.isdigit():
+                if letter == '0':
+                    return False
                 substring = s[pos:]
                 break
 

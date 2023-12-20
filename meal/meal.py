@@ -1,6 +1,8 @@
 def main():
     user_input = input('Give me a time: ')
-    convert(user_input)
+    hours = convert(user_input)
+
+    if hours 
 
 
 def convert(time):
@@ -9,7 +11,7 @@ def convert(time):
     minutes = float(minutes)
     minutes /= 60
     hours += minutes
-    print(hours)
+    return hours
 
 
 if __name__ == "__main__":

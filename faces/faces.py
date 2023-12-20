@@ -1,6 +1,6 @@
 def convert(user_input):
     # find the emoticon
-    index = if user_input.find(':)') else user_input.find(':(')
+    index = user_input.find(':)') if  else user_input.find(':(')
     print(index)
 
     # if index != 0:

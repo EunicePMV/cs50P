@@ -1,4 +1,4 @@
-user_input = input('Give me a greeting: ')
+user_input = input('Give me a greeting: ').lower().strip()
 
 if 'hello' in user_input:
     print('$0')

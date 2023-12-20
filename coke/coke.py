@@ -1,7 +1,3 @@
-# only accepts 25, 10 and 5
-# check if correct
-# then minus and print
-
 amount_due = 50
 while amount_due > 0:
     print('Amount Due:', amount_due)

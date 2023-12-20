@@ -3,27 +3,25 @@
 
 def main():
     plate = input("Plate: ")
-    is_valid(plate)
-    # if is_valid(plate):
-    #     print("Valid")
-    # else:
-    #     print("Invalid")
+    if is_valid(plate):
+        print("Valid")
+    else:
+        print("Invalid")
 
 
 def is_valid(s):
     special_char = '. [@_!$%^&*()<>?/\\|}{~:]#'
-    subtring = ''
+    substring = ''
     if len(s) >= 2 and len(s) <= 6:
         if special_char in s:
             return False
 
         for pos, letter in enumerate(s):
             if letter.isdigit():
-                sub_string = s[pos:]
+                substring = s[pos:]
                 break
-        i
 
-
-
+        if substring.isdigit():
+            return True
 
 main()

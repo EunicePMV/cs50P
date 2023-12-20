@@ -1,6 +1,6 @@
 user_input = input('Input:')
 new_word = ''
-vowel = 'a e i o u A E I O U'
+vowel = 'aeiouAEIOU'
 for letter in user_input:
     if letter in vowel:
         continue

@@ -6,5 +6,8 @@ calorie_count = {'apple': 130, 'avocado': 50, 'banana': 110,
                  'plums': 70, 'strawberries': 50, 'sweet cherries': 100,
                  'tangerine': 50, 'watermelon': 80}
 
-user_input = input('Item: ')
-print(calorie_count[f'{user_input.lower()}'])
+user_input = input('Item: ').lower()
+if user_input in calorie_count.keys():
+    print('Calories:', calorie_count[user_input.lower()])
+else:
+    print(False)

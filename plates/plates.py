@@ -16,16 +16,14 @@ def is_valid(s):
             if letter.isdigit():
                 if letter == '0':
                     return False
-                substring = s[pos:]
-                break
-        if substring.isdigit():
-            return True
-        if substring.isalpha():
-            return True
+                elif s[pos:].isdigit():
+                    print(s[pos:])
+                    return True
+        # if substring.isdigit():
+        #     return True
+        # if substring.isalpha():
+        #     return True
     else:
         return False
 
-# main()
-
-testing_str = 'AA21'
-print(testing_str.isalpha())
+main()

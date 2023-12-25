@@ -20,6 +20,8 @@ def is_valid(s):
                 break
         if substring.isdigit():
             return True
+        if substring.isalpha():
+            return True
     else:
         return False
 

@@ -5,3 +5,6 @@ calorie_count = {'apple': 130, 'avocado': 50, 'banana': 110,
                  'peach': 60, 'pear': 100, 'pineapple': 50,
                  'plums': 70, 'strawberries': 50, 'sweet cherries': 100,
                  'tangerine': 50, 'watermelon': 80}
+
+user_input = input('Item: ')
+print(calorie_count[f'{user_input.lower()}'])

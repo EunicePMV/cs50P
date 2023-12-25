@@ -9,5 +9,3 @@ calorie_count = {'apple': 130, 'avocado': 50, 'banana': 110,
 user_input = input('Item: ').lower()
 if user_input in calorie_count.keys():
     print('Calories:', calorie_count[user_input.lower()])
-else:
-    print(False)

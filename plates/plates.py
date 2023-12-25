@@ -14,6 +14,8 @@ def is_valid(s):
             return False
         elif s.isalpha():
             return True
+        elif s.isdigit() and len(s) == 2:
+            return False
         for pos, letter in enumerate(s):
             if letter.isdigit():
                 if letter == '0':

@@ -23,4 +23,7 @@ def is_valid(s):
     else:
         return False
 
-main()
+# main()
+
+testing_str = 'AA21'
+print(testing_str.isalpha())

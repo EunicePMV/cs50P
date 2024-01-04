@@ -33,6 +33,6 @@ while not done:
             if int(date) > 31:
                 continue
             convert_date(MONTHS.index(month)+1, date, year)
-            done = False
+            done = True
         except ValueError:
             continue

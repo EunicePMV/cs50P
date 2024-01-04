@@ -15,7 +15,3 @@ while not done:
         for key, value in grocery_lst.items():
             print(value, key.upper())
         done = True
-
-# count the number of items
-# print in uppercase letter
-# sort the items

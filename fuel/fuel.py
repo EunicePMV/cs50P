@@ -7,12 +7,13 @@ while not done:
     try:
         fraction = input('Fraction: ')
         num, denom = fraction.split('/')
+        num = int(num)
+        denom = int(denom)
 
         if num > denom:
-            break
+            raise InvalidNumerator
 
-        percent = round(int(num)/int(denom)*100)
-        print(percent)
+        percent = round(num/denom*100)
 
         if percent >= 99:
             print('F')

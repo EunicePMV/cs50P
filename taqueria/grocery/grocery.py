@@ -8,7 +8,7 @@ while True:
         else:
             grocery_lst[item] = 1
     except EOFError:
-        grocery_lst.sort()
+        grocery_lst.keys().sort()
         for key, value in grocery_lst.items():
             print(value, key.upper())
 

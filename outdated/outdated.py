@@ -34,7 +34,7 @@ while not done:
             # check the date if <= 31
             if int(date) > 31:
                 continue
-            convert(MONTHS.index(month)+1, date, year)
+            convert_date(MONTHS.index(month)+1, date, year)
             done = False
         except ValueError:
             continue

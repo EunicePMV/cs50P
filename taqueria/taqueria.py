@@ -20,3 +20,5 @@ while True:
         print(f'Total: ${total}' + '0')
     except EOFError:
         break
+    except:
+        continue

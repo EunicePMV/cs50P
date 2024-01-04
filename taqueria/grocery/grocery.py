@@ -10,3 +10,5 @@ while True:
             print(item.upper())
 
 # count the number of items
+# print in uppercase letter
+# sort the items

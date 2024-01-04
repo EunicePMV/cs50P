@@ -18,10 +18,5 @@ while True:
         price = menu[user_order.title()]
         total += price
         print(f'Total: ${total}' + '0')
-    except:
-        continue
-
-
-
-# make user_order in title case
-# add the current price
+    except EOFError:
+        break

@@ -28,10 +28,3 @@ while not done:
         continue
     except InvalidNumerator:
         continue
-
-
-
-# 1/4 - 25%, 1/2 - 50%, 3/4 - 75%
-# if 1% remains - E
-# if 99% remains - F
-# if X and Y is not integer, X > Y, or Y=0

@@ -4,7 +4,7 @@ while True:
     try:
         item = input()
         if item in grocery_lst.keys():
-            grocery_lst[item] =+ 1
+            grocery_lst[item] += 1
         else:
             grocery_lst[item] = 1
     except EOFError:

@@ -38,3 +38,14 @@ while not done:
             done = True
         except ValueError:
             continue
+
+
+
+# :( input of 23/6/1912 results in reprompt
+#     expected program to reject input, but it did not
+
+# :( input of 1/50/2000 results in reprompt
+#     expected program to reject input, but it did not
+
+# :( input of September 8 1636 results in reprompt
+#     expected program to reject input, but it did not

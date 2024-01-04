@@ -9,7 +9,7 @@ while not done:
         num, denom = fraction.split('/')
 
         if num > denom:
-            raise InvalidNumerator
+            break
 
         percent = round(int(num)/int(denom)*100)
         print(percent)
@@ -26,7 +26,7 @@ while not done:
     except ZeroDivisionError:
         continue
     except InvalidNumerator:
-        break
+        continue
 
 
 
@@ -34,13 +34,3 @@ while not done:
 # if 1% remains - E
 # if 99% remains - F
 # if X and Y is not integer, X > Y, or Y=0
-
-# :( input of 1/3 yields output of 33%
-#     expected "33%", not "34%\n"
-
-# :( input of 99/100 yields output of F
-#     Did not find "F" in "Fraction: "
-
-
-# :( input of 10/3 results in reprompt
-#     expected program to reject input, but it did not

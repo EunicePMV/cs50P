@@ -13,7 +13,13 @@ menu = {
 total = 0
 while True:
     user_order = input('Item:')
-    print(user_order.title())
+
+    try:
+        price = menu[user_order.title()]
+        total += price
+        print(f'Total: ${total}' + '0')
+    except:
+        continue
 
 
 

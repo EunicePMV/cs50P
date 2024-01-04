@@ -1,8 +1,6 @@
 def convert_date(month, date, year):
     print(f'{year}-{month}-{date}')
 
-
-
 MONTHS = [
     "January",
     "February",

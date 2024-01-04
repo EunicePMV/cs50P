@@ -19,7 +19,7 @@ MONTHS = [
 done = False
 while not done:
     try:
-        user_date = input('Date: ')
+        user_date = input('Date: ').strip()
         month, date, year = user_date.split('/')
         convert_date(month, date, year)
         done = True

@@ -8,7 +8,10 @@ while True:
         else:
             grocery_lst[item] = 1
     except EOFError:
-        print(grocery_lst)
+        # sort the dictionary
+        grocery_keys = list(grocery_lst.keys())
+
+        print(grocery_lst, grocery_keys)
         # grocery_keys = list(grocery_lst.keys()).sort()
         # grocery_lst = {i : grocery_lst for i in grocery_keys}
         # for key, value in grocery_lst.items():

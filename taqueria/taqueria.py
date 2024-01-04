@@ -13,13 +13,13 @@ menu = {
 total = 0
 done = False
 while not done:
-    user_order = input('Item:')
-
     try:
+        user_order = input('Item: ')
         price = menu[user_order.title()]
         total += price
         print(f'Total: ${total}' + '0')
-    except EOFError as e:
-        print(e)
-    except:
+    except EOFError:
+        done = True
+        print('\n')
+    except KeyError:
         continue

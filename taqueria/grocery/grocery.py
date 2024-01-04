@@ -9,7 +9,7 @@ while True:
             grocery_lst[item] = 1
     except EOFError:
         grocery_keys = list(grocery_lst.keys()).sort()
-        grocery_lst = {i : grocery_lst for i in }
+        grocery_lst = {i : grocery_lst for i in grocery_keys}
         for key, value in grocery_lst.items():
             print(value, key.upper())
 

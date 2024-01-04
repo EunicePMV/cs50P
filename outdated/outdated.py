@@ -29,8 +29,12 @@ while not done:
         # check with the other format: September 23, 2001
         month, date, year = user_date.split(' ')
         date = date.replace(',', '')
+
         # check the date if <= 31
-        continue
+        if int(date) > 31:
+            continue
+
+        convert(month, date, year)
 
 
 # if invalid date, prompt again:

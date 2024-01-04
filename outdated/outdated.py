@@ -22,7 +22,7 @@ while not done:
         user_date = input('Date: ')
         month, date, year = user_date.split('/')
         # convert_date(month, date, year)
-        print(f'{year}-{int(month):02}-{date}'.replace('\n', ''))
+        print(f'{year}-{int(month):02}-{date}')
         done = True
     except ValueError:
         try:

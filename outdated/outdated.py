@@ -28,7 +28,7 @@ while not done:
     except ValueError:
         # check with the other format: September 23, 2001
         month, date, year = user_date.split(' ')
-        print(month, date, year)
+        date = date.replace(',', '')
         # check the date if <= 31
         continue
 

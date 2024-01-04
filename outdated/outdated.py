@@ -24,4 +24,6 @@ while not done:
         month, date, year = user_date.split('/')
         print(month, date, year)
     except ValueError:
+        # check with the other format: September 23, 2001
+        # check the date if <= 31
         continue

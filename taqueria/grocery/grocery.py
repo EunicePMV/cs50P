@@ -3,10 +3,11 @@ grocery_lst = {}
 while True:
     try:
         item = input()
-        if item in grocery_lst.keys():
-            grocery_lst[item] =+ 1
-        else:
-            grocery_lst[item] = 1
+        print(grocery_lst.keys())
+        # if item in grocery_lst.keys():
+        #     grocery_lst[item] =+ 1
+        # else:
+        #     grocery_lst[item] = 1
     except EOFError:
         print(grocery_lst)
         # grocery_keys = list(grocery_lst.keys()).sort()

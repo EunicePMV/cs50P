@@ -1,6 +1,6 @@
 grocery_lst = {}
-
-while True:
+done = False
+while not done:
     try:
         item = input()
         if item in grocery_lst.keys():
@@ -8,14 +8,13 @@ while True:
         else:
             grocery_lst[item] = 1
     except EOFError:
-        # sort the dictionary
         grocery_keys = list(grocery_lst.keys())
-
-        print(grocery_lst, grocery_keys)
-        # grocery_keys = list(grocery_lst.keys()).sort()
-        # grocery_lst = {i : grocery_lst for i in grocery_keys}
-        # for key, value in grocery_lst.items():
-        #     print(value, key.upper())
+        grocery_keys.sort()
+        grocery_lst = {i: grocery_lst[i] for i in grocery_keys}
+        print()
+        for key, value in grocery_lst.items():
+            print(value, key.upper())
+        done = True
 
 # count the number of items
 # print in uppercase letter

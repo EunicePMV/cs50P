@@ -1,6 +1,6 @@
 def convert_date(month, date, year):
     # print(f'{year}-{int(month) : 03d}-{date}')
-    print(f'{year}-{month}-{date}')
+    print(f'{year}-{int(month): 02}-{date}')
 
 MONTHS = [
     "January",

@@ -17,7 +17,7 @@ while not done:
         user_order = input('Item: ')
         price = menu[user_order.title()]
         total += price
-        print(f'Total: ${total}' + '0')
+        print(f'Total: ${total}')
     except EOFError:
         done = True
         print('\n')

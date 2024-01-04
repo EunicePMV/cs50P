@@ -3,7 +3,7 @@ def convert_date(month, date, year):
 
 
 
-month = [
+MONTHS = [
     "January",
     "February",
     "March",
@@ -26,17 +26,15 @@ while not done:
         convert_date(month, date, year)
         done = True
     except ValueError:
-        # check with the other format: September 23, 2001
-        month, date, year = user_date.split(' ')
-        date = date.replace(',', '')
+        try:
+            # check with the other format: September 23, 2001
+            month, date, year = user_date.split(' ')
+            date = date.replace(',', '')
 
-        # check the date if <= 31
-        if int(date) > 31:
+            # check the date if <= 31
+            if int(date) > 31:
+                continue
+            convert(MONTHS.index(month)+1, date, year)
+            done = False
+        except ValueError:
             continue
-
-        convert(month, date, year)
-
-
-# if invalid date, prompt again:
-# 8 September 1636
-#

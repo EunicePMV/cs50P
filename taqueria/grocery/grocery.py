@@ -7,7 +7,7 @@ while True:
             grocery_lst[item] =+ 1
         else:
             grocery_lst[item] = 1
-        print(grocery_lst.keys())
+        print(list(grocery_lst.keys()))
     except EOFError:
         print(grocery_lst)
         # grocery_keys = list(grocery_lst.keys()).sort()

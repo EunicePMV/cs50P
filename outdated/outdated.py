@@ -21,6 +21,7 @@ done = False
 while not done:
     try:
         user_date = input('Date: ')
-        
+        month, date, year = user_date.split('/')
+        print(month, date, year)
     except ValueError:
         continue

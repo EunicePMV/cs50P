@@ -21,12 +21,20 @@ while not done:
     try:
         user_date = input('Date: ').strip()
         month, date, year = user_date.split('/')
+
+        if int(month) > 12 or int(date) > 31:
+            raise ValueError
+
         convert_date(month, date, year)
         done = True
     except ValueError:
         try:
             # check with the other format: September 23, 2001
             month, date, year = user_date.split(' ')
+
+            if ',' not in date:
+                raise ValueError
+
             date = date.replace(',', '')
 
             # check the date if <= 31
@@ -38,14 +46,3 @@ while not done:
             done = True
         except ValueError:
             continue
-
-
-
-# :( input of 23/6/1912 results in reprompt
-#     expected program to reject input, but it did not
-
-# :( input of 1/50/2000 results in reprompt
-#     expected program to reject input, but it did not
-
-# :( input of September 8 1636 results in reprompt
-#     expected program to reject input, but it did not

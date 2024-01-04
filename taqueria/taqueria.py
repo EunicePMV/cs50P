@@ -10,3 +10,12 @@ menu = {
     "Tortilla Salad": 8.00
 }
 
+total = 0
+while True:
+    user_order = input('Item:')
+    print(user_order.title())
+
+
+
+# make user_order in title case
+# add the current price

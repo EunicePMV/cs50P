@@ -1,5 +1,5 @@
 def convert_date(month, date, year):
-    month = str(month).strip()
+    # print(f'{year}-{month : 03d}-{date}')
     print(f'{year}-{month : 03d}-{date}')
 
 MONTHS = [
@@ -34,7 +34,10 @@ while not done:
             if int(date) > 31:
                 print('here')
                 continue
-            convert_date(MONTHS.index(month)+1, date, year)
+            month = str(MONTHS.index(month)+1)
+            month = month.strip()
+            print(month)
+            convert_date(month, date, year)
             done = True
         except ValueError:
             continue

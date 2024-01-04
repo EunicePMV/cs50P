@@ -37,4 +37,4 @@ while not done:
             convert_date(month, date, year)
             done = True
         except ValueError:
-            done = True
+            continue

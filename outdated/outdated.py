@@ -1,5 +1,5 @@
 def convert_date(month, date, year):
-    print(f'{year}-{month}-{date}')
+    print(f'{year}-' + '{:01d}'.format(month) + '-{date}')
 
 MONTHS = [
     "January",

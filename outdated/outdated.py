@@ -31,11 +31,9 @@ while not done:
 
             # check the date if <= 31
             if int(date) > 31:
-                print('here')
                 continue
             month = str(MONTHS.index(month)+1)
             month = month.strip()
-            print(month)
             convert_date(month, date, year)
             done = True
         except ValueError:

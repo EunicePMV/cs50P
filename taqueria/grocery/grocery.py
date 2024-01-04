@@ -9,8 +9,8 @@ while True:
             grocery_lst[item] = 1
     except EOFError:
         grocery_lst.sort()
-        for key, value in grocery_lst:
-            print(item.upper())
+        for key, value in grocery_lst.items():
+            print(value, key.upper())
 
 # count the number of items
 # print in uppercase letter

@@ -33,9 +33,12 @@ def main():
 def get_level():
     valid_lvls = [1,2,3]
     while True:
-        lvl = input('Level: ')
-        if int(lvl) in valid_lvls:
-            return int(lvl)
+        try:
+            lvl = int(input('Level: '))
+            if lvl in valid_lvls:
+                return lvl
+        except ValueError:
+            continue
 
 
 def generate_integer(level):

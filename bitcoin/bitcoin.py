@@ -4,9 +4,10 @@ try:
     bitcoins = float(sys.argv[1])
     response = requests.get("https://api.coindesk.com/v1/bpi/currentprice.json")
     bitcoin_json = response.json()
-    current_price = float(bitcoin_json['bpi']['USD']['rate'])
-    total = current_price * bitcoins
-    print(f'${total:.4d}')
+    current_price = bitcoin_json['bpi']['USD']['rate']
+    print(int(current_price))
+    # total = current_price * bitcoins
+    # print(f'${total:.4d}')
 except requests.RequestException:
     ...
 except IndexError:

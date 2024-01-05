@@ -44,14 +44,14 @@ def get_level():
 def generate_integer(level):
     # generate non-negative int with level digits or raises ValueError if level not 1, 2, or 3
     if level == 1:
-        X = random.randint(1, 10)
-        Y = random.randint(1, 10)
+        X = random.randint(0, 9)
+        Y = random.randint(0, 9)
     elif level == 2:
-        X = random.randint(1, 20)
-        Y = random.randint(1, 20)
+        X = random.randint(10, 99)
+        Y = random.randint(10, 99)
     elif level == 3:
-        X = random.randint(1, 30)
-        Y = random.randint(1, 30)
+        X = random.randint(100, 999)
+        Y = random.randint(100, 999)
     else:
         raise ValueError
     return X, Y

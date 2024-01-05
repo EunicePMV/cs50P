@@ -6,7 +6,7 @@ def main():
     lvl = get_level()
 
     # generate 10 math probs, X and Y random positive int: X + Y =
-    # X, Y = generate_integer(lvl)
+    X, Y = generate_integer(lvl)
 
     # output EEE if not correct or not even a number, prompt the user again until 3 tries, the program should output the correct answer
     # output the scores
@@ -21,9 +21,9 @@ def get_level():
 
 
 def generate_integer(level):
-    valid_lvl = [1, 2, 3]
-    return
     # generate non-negative int with level digits or raises ValueError if level not 1, 2, or 3
+    
+
     ...
 
 

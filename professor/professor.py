@@ -5,24 +5,28 @@ def main():
     # should prompt 1,2, or 3; else reprompt
     lvl = get_level()
 
-    generate_integer(lvl)
+    scores = 0
+    trials = 3
+    for _ in range(10):
+        # generate 10 math probs, X and Y random positive int: X + Y =
+        X, Y = generate_integer(lvl)
+        total = X+Y
 
-    # output EEE if not correct or not even a number, prompt the user again until 3 tries, the program should output the correct answer
-    # output the scores
-    # scores = 0
-    # trials = 3
-    # for _ in range(10):
-    #     # generate 10 math probs, X and Y random positive int: X + Y =
-    #     X, Y = generate_integer(lvl)
-    #     total = X+Y
+        # given 3 trials for each problem
+        trials = 3
+        while trials != 0:
+            sum = input(f'{X} + {Y} = ')
+            if int(sum) == total:
+                trials = 0
+                scores += 1
+            else:
+                # output EEE if incorrect, and subtract num of trials
+                print('EEE')
+                trials -= 1
 
-    #     # given 3 trials for each problem
-    #     trials = 3
-    #     while trials != 0:
-    #         sum = input(f'{X} + {Y} = ')
-    #         if sum == X+Y:
-    #             print('correct')
-    #             continue
+            if trials == 0:
+                print(f'{X} + {Y} = {total}')
+    print(f'Score: {scores}')
 
 
 
@@ -36,14 +40,19 @@ def get_level():
 
 def generate_integer(level):
     # generate non-negative int with level digits or raises ValueError if level not 1, 2, or 3
-    X = random.randint(1, level)
-    Y = random.randint(1, level)
-    print(X, Y)
+    if level == 1:
+        X = random.randint(1, 10)
+        Y = random.randint(1, 10)
+    elif level == 2:
+        X = random.randint(1, 20)
+        Y = random.randint(1, 20)
+    elif level == 3:
+        X = random.randint(1, 30)
+        Y = random.randint(1, 30)
+    else:
+        raise ValueError
     return X, Y
 
 
 if __name__ == "__main__":
     main()
-
-# If David were to answer incorrectly, the toy would display EEE
-# after three incorrect answers for the same problem, display the correct answer: 4 + 0 = 4

@@ -1,11 +1,13 @@
 import requests, sys
 
 try:
-    ...
+    bitcoins = float(sys.argv[1])
 except requests.RequestException:
     ...
 except IndexError:
     sys.exit('Missing command-line argument')
+except ValueError:
+    sys.exit('Command-line argument is not a number')
 
 
 # command-line argument the number of Bitcoins n

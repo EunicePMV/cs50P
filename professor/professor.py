@@ -13,14 +13,16 @@ def main():
 
 
 def get_level():
+    valid_lvls = [1,2,3]
     while True:
         lvl = input('Level: ')
-        if lvl.isnumeric() and lvl != '0':
+        if int(lvl) in valid_lvls:
             return int(lvl)
 
 
 def generate_integer(level):
     valid_lvl = [1, 2, 3]
+    return
     # generate non-negative int with level digits or raises ValueError if level not 1, 2, or 3
     ...
 

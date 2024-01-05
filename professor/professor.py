@@ -3,16 +3,22 @@ import random
 
 def main():
     # should prompt 1,2, or 3; else reprompt
-    get_level()
+    lvl = get_level()
 
     # generate 10 math probs, X and Y random positive int: X + Y =
+    X, Y = generate_integer(lvl)
+
     # output EEE if not correct or not even a number, prompt the user again until 3 tries, the program should output the correct answer
     # output the scores
 
 
 def get_level():
-    # prompts level and return level
-
+    valid_lvl = [1, 2, 3]
+    done = False
+    while not done:
+        lvl = int(input('Level: '))
+        if lvl in valid_lvl:
+            return lvl
 
 
 def generate_integer(level):

@@ -1,7 +1,10 @@
-import requests, sys
+import requests, sys, json
 
 try:
     bitcoins = float(sys.argv[1])
+    response = requests.get("https://api.coindesk.com/v1/bpi/currentprice.json")
+    bitcoin_json = json.dumps(response.json(), indent=2)
+    print(bitcoin_json)
 except requests.RequestException:
     ...
 except IndexError:

@@ -10,6 +10,8 @@ def main():
 
     # output EEE if not correct or not even a number, prompt the user again until 3 tries, the program should output the correct answer
     # output the scores
+    scores = 0
+    trials = 3
 
 
 def get_level():
@@ -22,9 +24,9 @@ def get_level():
 
 def generate_integer(level):
     # generate non-negative int with level digits or raises ValueError if level not 1, 2, or 3
-    
-
-    ...
+    X = random.randint(1, level)
+    Y = random.randint(1, level)
+    return X, Y
 
 
 if __name__ == "__main__":

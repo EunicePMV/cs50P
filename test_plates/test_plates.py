@@ -15,3 +15,4 @@ def test_num_middle():
 
 def test_alphanum():
     assert is_valid('123') == False
+    assert is_valid('BSCS') == False

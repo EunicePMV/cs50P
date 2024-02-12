@@ -2,6 +2,7 @@ from plates import is_valid
 
 def test_beginning_alphabet():
     assert is_valid('12') == False
+    assert is_valid('123') == False
 
 def test_min_max_characters():
     assert is_valid('S') == False

@@ -1,8 +1,8 @@
 from plates import is_valid
 
-# def min_max_characters():
-#     assert is_valid('CS') == False
-#     assert is_valid('YABIEEE') == False
+def test_min_max_characters():
+    assert is_valid('CS') == False
+    assert is_valid('YABIEEE') == False
 
 # def test_two_alphabets():
 #     assert is_valid('CS50') == True

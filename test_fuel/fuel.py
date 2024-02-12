@@ -12,9 +12,6 @@ def convert(fraction):
         num = int(num)
         denom = int(denom)
 
-        if num > denom:
-            raise InvalidNumerator
-
         percent = round(num/denom*100)
         return percent
     except ValueError:

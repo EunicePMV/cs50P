@@ -5,7 +5,7 @@ def test_conversion():
     assert convert('1/4') == 25
     assert convert('1/2') == 50
     assert convert('3/4') == 75
-    assert convert('4/4') == 1
+    assert convert('4/4') == 100
 
 def test_zero_division_error():
     with pytest.raises(ZeroDivisionError) as error:

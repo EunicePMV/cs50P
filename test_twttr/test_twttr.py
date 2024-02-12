@@ -8,6 +8,9 @@ def test_upper_vowels():
     assert shorten('LOVE') == 'LV'
     assert shorten('YABIU') == 'YB'
 
+def test_punctuation():
+    assert shorten('')
+
 # def main():
 #     test_twttr()
 

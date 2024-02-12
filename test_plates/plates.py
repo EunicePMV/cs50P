@@ -20,7 +20,10 @@ def is_valid(s):
                 if letter == '0':
                     return False
                 elif s[pos:].isdigit():
-                    return True
+                    if s[:2].isalpha():
+                        return True
+                    else:
+                        return False
             elif letter in special_char:
                 return False
     else:

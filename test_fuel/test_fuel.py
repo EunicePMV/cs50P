@@ -12,5 +12,6 @@ def test_value_error():
     assert error.type is ValueError
 
 def test_output():
+    assert gauge(99) == 'F'
     assert gauge(1) == 'E'
-    assert gauge()
+    assert gauge(75) == '75%'

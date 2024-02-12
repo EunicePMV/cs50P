@@ -7,4 +7,4 @@ def test_zero_division_error():
 
 def test_value_error():
     with pytest.raises(ValueError):
-        
+        'one'/1

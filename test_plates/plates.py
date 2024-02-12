@@ -11,7 +11,7 @@ def is_valid(s):
     substring = ''
     if len(s) >= 2 and len(s) <= 6:
         if s.isalpha():
-            return False
+            return True
         if s.isdigit() and len(s) == 2:
             return False
 

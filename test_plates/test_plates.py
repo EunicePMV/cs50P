@@ -13,3 +13,6 @@ def test_leading_zero():
 
 def test_num_middle():
     assert is_valid('CS50P') == False
+
+def test_alphanumeric_punctuation():
+    assert is_valid('CS.[]') == False

@@ -10,9 +10,9 @@ def is_valid(s):
     special_char = '. [@_!$%^&*()<>?/\\|}{~:]#'
     substring = ''
     if len(s) >= 2 and len(s) <= 6:
-        if s.isalpha():
-            return True
-        elif s.isdigit() and len(s) == 2:
+        # if s.isalpha():
+        #     return True
+        if s.isdigit() and len(s) == 2:
             return False
 
         for pos, letter in enumerate(s):

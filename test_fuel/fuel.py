@@ -3,9 +3,8 @@ class InvalidNumerator(Exception):
 
 def main():
     fraction = input('Fraction: ')
-    convert(fraction)
-
-
+    percent = convert(fraction)
+    print(gauge(percent))
 
 def convert(fraction):
     try:
@@ -17,26 +16,21 @@ def convert(fraction):
             raise InvalidNumerator
 
         percent = round(num/denom*100)
-
-        if percent >= 99:
-            print('F')
-        elif percent <= 1:
-            print('E')
-        else:
-            print(f'{percent}%')
-        done = True
+        return percent
     except ValueError:
-        continue
+        raise ValueError
     except ZeroDivisionError:
-        continue
-    except InvalidNumerator:
-        continue
-
-
+        raise ZeroDivisionError
+    # except InvalidNumerator:
+    #     continue
 
 def gauge(percentage):
-    ...
-
+    if percent >= 99:
+        return 'F'
+    elif percent <= 1:
+        return 'E'
+    else:
+        return f'{percentage}%'
 
 if __name__ == "__main__":
     main()

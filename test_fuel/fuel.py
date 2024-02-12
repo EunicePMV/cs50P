@@ -21,8 +21,6 @@ def convert(fraction):
         raise ValueError
     except ZeroDivisionError:
         raise ZeroDivisionError
-    except InvalidNumerator:
-        continue
 
 def gauge(percentage):
     if percentage >= 99:

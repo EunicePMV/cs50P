@@ -8,3 +8,8 @@ def test_h():
 
 def test_other_greetings():
     assert value('good morning') == 100
+
+def test_capitalization():
+    assert value('HELLO') == 0
+    assert value('HI') == 20
+    assert value('GOOD MORNING') == 100

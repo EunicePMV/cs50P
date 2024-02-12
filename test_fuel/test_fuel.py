@@ -1,7 +1,4 @@
 from fuel import convert, gauge
 
-# test if the output is correct
-def test_output_accuracy():
-    assert 
-
-# test if the
+def test_zero_division():
+    assert '100/0' == 

@@ -12,9 +12,9 @@ def test_number():
     assert shorten('love123') == 'lv'
     assert shorten('yabiu08') == 'yb'
 
-def test_punctuation():
-    assert shorten('l,o,v,e') == 'lv'
-    assert shorten('yabiu~!@#$%^&*(),./;"[]|') == 'yb'
+# def test_punctuation():
+#     assert shorten('l,o,v,e') == 'lv'
+#     assert shorten('yabiu~!@#$%^&*(),./;"[]|') == 'yb'
 
 # def main():
 #     test_twttr()

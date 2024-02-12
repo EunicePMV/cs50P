@@ -1,6 +1,12 @@
 import pytest
 from fuel import convert, gauge
 
+def test_conversion():
+    assert convert('1/4') == 25
+    assert convert('1/2') == 50
+    assert convert('3/4') == 75
+    assert convert('4/4') == 1
+
 def test_zero_division_error():
     with pytest.raises(ZeroDivisionError) as error:
         convert('100/0')

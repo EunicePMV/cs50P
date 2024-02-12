@@ -1,7 +1,7 @@
 from plates import is_valid
 
 def test_min_max_characters():
-    assert is_valid('CS') == False
+    assert is_valid('S') == False
     assert is_valid('YABIEEE') == False
 
 # def test_two_alphabets():

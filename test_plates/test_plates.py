@@ -16,3 +16,4 @@ def test_num_middle():
 def test_alphanumeric():
     assert is_valid('123') == False
     assert is_valid('BSCS') == True
+    assert is_vaLid('CS50') == True

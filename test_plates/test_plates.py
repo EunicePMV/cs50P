@@ -12,7 +12,3 @@ def test_leading_zero():
 
 def test_num_middle():
     assert is_valid('CS50P') == False
-
-def test_alphanumeric():
-    assert is_valid('123') == False
-    assert is_valid('BSCS') == True

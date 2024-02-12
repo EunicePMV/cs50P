@@ -8,8 +8,9 @@ def shorten(word):
     for letter in word:
         if letter in vowel:
             continue
+        if letter.isdigit():
+            continue
         new_word += letter
-
     return new_word
 
 if __name__ == "__main__":

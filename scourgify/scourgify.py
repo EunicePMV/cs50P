@@ -10,17 +10,15 @@ def main():
             if second_arg:
                 sys.exit('Too many command-line arguments')
         except IndexError:
-            if not file.endswith('.py'):
-                sys.exit('Not a Python file')
+            if not file.endswith('.csv'):
+                sys.exit('Not a CSV file')
 
         try:
             with open(file, 'r') as f:
                 lines = f.readlines()
 
-            print('success')
-
         except FileNotFoundError:
-            sys.exit('File does not exist')
+            sys.exit('Could not read ' + file)
 
     except IndexError:
         sys.exit('Too few command-line arguments')

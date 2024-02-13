@@ -27,6 +27,7 @@ def prettier(file):
     reader = csv.DictReader(file)
     for row in reader:
         print(row)
+    print(row)
     # spamreader = csv.reader(file, delimiter=',')
     # print(spamreader)
     # for row in spamreader:

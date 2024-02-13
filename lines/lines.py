@@ -1,12 +1,3 @@
-# expects one command-line argument:
-#   - the name or path of a Python file
-#   -> output: num of lines
-
-# if file:
-#   - does not end in .py
-#   - file does not exist
-# exit: sys.exit
-
 import sys
 
 def main():
@@ -26,15 +17,16 @@ def main():
                 lines = f.readlines()
 
             num_lines = 0
-            print(lines)
             for line in lines:
                 line = line.lstrip(' ')
-                print(line)
                 if line.startswith('#'):
-                    print('comment exist')
                     continue
-                # elif line.startswith('"""'):
-                #     continue
+                elif line.startswith('"""'):
+                    continue
+                elif line == '\n':
+                    continue
+                num_lines += 1
+            print(num_lines)
 
         except FileNotFoundError:
             sys.exit('File does not exist')

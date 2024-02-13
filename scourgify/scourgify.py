@@ -28,10 +28,12 @@ def csv_cleaner(file):
     reader = csv.DictReader(file)
     fieldnames = ['first', 'last', 'house']
     writer = csv.DictWriter(file, fieldnames=fieldnames)
-    writer.write.header()
+    writer.writeheader()
     for row in reader:
         fullname = row['name']
+        house = row['house']
         lastname, firstname = fullname.split(',')
+        print({'first': firstname, 'last': lastname, 'house':house})
 
 if __name__ == "__main__":
     main()

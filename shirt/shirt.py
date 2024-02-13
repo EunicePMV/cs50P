@@ -1,6 +1,6 @@
 import sys
 import os
-import Pillow
+from PIL import Image
 
 def main():
     try:
@@ -14,7 +14,7 @@ def main():
         except IndexError:
             if not second_file.endswith(('.jpg', '.jpeg', '.png')) or not file.endswith(('.jpg', '.jpeg', '.png')):
                 sys.exit('Invalid output')
-            elif os.path.splitext(file) != os.path.splitext(second_file):
+            elif os.path.splitext(file)[1] != os.path.splitext(second_file)[1]:
                 sys.exit('Input and output have different extension')
 
         try:
@@ -22,7 +22,7 @@ def main():
             size = shirt.size
 
             muppet = Image.open(file)
-            new_img = second_file.paste(muppet, shirt)
+            new_img = muooe.paste(muppet, shirt)
 
         except FileNotFoundError:
             sys.exit('Input does not exist')

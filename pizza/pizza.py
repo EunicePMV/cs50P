@@ -26,7 +26,7 @@ def main():
 
 def prettier(file):
     reader = csv.DictReader(file)
-    print(tabulate(reader, headers="keys"))
+    print(tabulate(reader, headers="keys", tablefmt="grid"))
 
 if __name__ == "__main__":
     main()

@@ -19,15 +19,13 @@ def main():
         try:
             shirt = Image.open("shirt.png")
             shirt_size = shirt.size
+            shirt_mask = shirt.convert('L')
 
             muppet = Image.open(file)
-            cropped_muppet = muppet.
+            # cropped_muppet = muppet.crop(shirt_size)
 
-            # crop the muppet pict according to the shirt size
-
-
-            # muppet.paste(shirt, shirt_size)
-            # muppet.save(second_file)
+            muppet.paste(shirt, shirt_mask)
+            muppet.save(second_file)
 
         except FileNotFoundError:
             sys.exit('Input does not exist')

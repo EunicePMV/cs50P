@@ -11,8 +11,8 @@ def main():
             if second_arg:
                 sys.exit('Too many command-line arguments')
         except IndexError:
-            if not file.endswith('.csv'):
-                sys.exit('Not a CSV file')
+            if not second_file.endswith('.jpg') or not file.endswith('.jpg'):
+                sys.exit('Invalid output')
 
         try:
             with open(file, newline='') as f:

@@ -27,7 +27,11 @@ def main():
 
             num_lines = 0
             for line in lines:
-                
+                if line.startswith('#'):
+                    continue
+                elif line.startswith('"""'):
+                    continue 
+
         except FileNotFoundError:
             sys.exit('File does not exist')
 

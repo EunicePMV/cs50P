@@ -14,23 +14,16 @@ def main():
 
         try:
             with open(file, 'r') as f:
-                lines = f.readlines()
-
-            num_lines = 0
-            for line in lines:
-                line = line.lstrip(' ')
-                if line.startswith('#'):
-                    continue
-                elif line == '\n':
-                    continue
-                num_lines += 1
-            print(num_lines)
+                prettier(f)
 
         except FileNotFoundError:
             sys.exit('File does not exist')
 
     except IndexError:
         sys.exit('Too few command-line arguments')
+
+def prettier(file):
+    print(file.readlines())
 
 if __name__ == "__main__":
     main()

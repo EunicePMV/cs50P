@@ -21,7 +21,7 @@ def main():
             shirt_size = shirt.size
             shirt_mask = shirt.convert('RGBA')
 
-            muppet = Image.open(file).resize(shirt_size)
+            muppet = Image.open(file)
             # muppet = Image.open(file)
             # muppet_width, muppet_height = muppet.size
 

@@ -11,17 +11,22 @@ import sys
 
 def main():
     try:
-        command_line_arg = sys.argv[1]
+        file = sys.argv[1]
 
         try:
             second_arg = sys.argv[2]
             if second_arg:
                 sys.exit('Too many command-line arguments')
         except IndexError:
-            if not command_line_arg.endswith('.py'):
+            if not file.endswith('.py'):
                 sys.exit('Not a Python file')
 
-            
+        try:
+            with open(file, 'r') as f:
+                lines = f.readlines()
+            print(lines)
+        except FileNotFoundError:
+            sys.exit('File does not exist')
 
     except IndexError:
         sys.exit('Too few command-line arguments')

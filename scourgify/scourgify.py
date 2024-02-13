@@ -18,8 +18,10 @@ def main():
             with open(file, newline='') as f:
                 clean_data_dict = csv_cleaner(f)
 
-            with open(second_file, 'w', newline='') as f:
-                csv_write(f)
+            print(clean_data_dict)
+
+            # with open(second_file, 'w', newline='') as f:
+            #     csv_write(f)
 
         except FileNotFoundError:
             sys.exit('Could not read ' + file)
@@ -34,7 +36,8 @@ def csv_cleaner(file):
         fullname = row['name']
         house = row['house']
         lastname, firstname = fullname.split(',')
-        print({'first': firstname, 'last': lastname, 'house':house})
+        cleaned_data = {**cleaned_data,  **{'first': firstname, 'last': lastname, 'house':house}}
+    return cleaned_data
 
 def csv_write(file):
     fieldnames = ['first', 'last', 'house']

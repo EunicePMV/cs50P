@@ -26,6 +26,9 @@ def main():
 
 def csv_cleaner(file):
     reader = csv.DictReader(file)
+    fieldnames = ['first', 'last', 'house']
+    writer = csv.DictWriter(file, fieldnames=fieldnames)
+    writer.write.header()
     for row in reader:
         fullname = row['name']
         lastname, firstname = fullname.split(',')

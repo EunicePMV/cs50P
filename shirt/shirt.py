@@ -22,7 +22,7 @@ def main():
             size = shirt.size
 
             muppet = Image.open(file)
-            new_img = 
+            new_img = second_file.paste(muppet, shirt)
 
         except FileNotFoundError:
             sys.exit('Input does not exist')

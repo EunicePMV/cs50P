@@ -1,6 +1,6 @@
 import sys
 import os
-from PIL import Image
+from PIL import Image, ImageOps
 
 def main():
     try:
@@ -22,6 +22,7 @@ def main():
             shirt_mask = shirt.convert('RGBA')
 
             muppet = Image.open(file)
+            muppet = ImageOps.fit(muppet, shirt_size)
             # muppet = Image.open(file)
             # muppet_width, muppet_height = muppet.size
 

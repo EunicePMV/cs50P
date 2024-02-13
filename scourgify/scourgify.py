@@ -34,11 +34,11 @@ def csv_cleaner(file):
         fullname = row['name']
         house = row['house']
         lastname, firstname = fullname.split(',')
-        cleaned_data.append({'first': firstname, 'last': lastname, 'house':house})
+        cleaned_data.append({'first name': firstname, 'last name': lastname, 'house':house})
     return cleaned_data
 
 def csv_write(file, data):
-    fieldnames = ['first name', 'last name', 'house']
+    fieldnames = ['first', 'last', 'house']
     writer = csv.DictWriter(file, fieldnames=fieldnames)
     writer.writeheader()
     for row in data:

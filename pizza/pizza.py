@@ -1,5 +1,6 @@
 import sys
 import csv
+from tabulate import tabulate
 
 def main():
     try:
@@ -25,13 +26,7 @@ def main():
 
 def prettier(file):
     reader = csv.DictReader(file)
-    for row in reader:
-        print(row)
-    print(row)
-    # spamreader = csv.reader(file, delimiter=',')
-    # print(spamreader)
-    # for row in spamreader:
-    #     print(row)
+    print(tabulate(reader, headers="keys"))
 
 if __name__ == "__main__":
     main()

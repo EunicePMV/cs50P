@@ -27,7 +27,8 @@ def main():
 def csv_cleaner(file):
     reader = csv.DictReader(file)
     for row in reader:
-        print(row)
+        fullname = row['name']
+        lastname, firstname = fullname.split(',')
 
 if __name__ == "__main__":
     main()

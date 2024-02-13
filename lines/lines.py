@@ -24,7 +24,10 @@ def main():
         try:
             with open(file, 'r') as f:
                 lines = f.readlines()
-            print(lines)
+
+            num_lines = 0
+            for line in lines:
+                
         except FileNotFoundError:
             sys.exit('File does not exist')
 

@@ -13,7 +13,7 @@ def main():
         except IndexError:
             if not second_file.endswith(('.jpg', '.jpeg', '.png')) or not file.endswith(('.jpg', '.jpeg', '.png')):
                 sys.exit('Invalid output')
-            elif os.splitext(file) != os.splitext(second_file):
+            elif os.path.splitext(file) != os.path.splitext(second_file):
                 sys.exit('Input and output have different extension')
 
         # try:

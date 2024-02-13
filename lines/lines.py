@@ -14,8 +14,10 @@ def main():
     print(sys.argv[1])
 
     # check if there's an argument
+    if sys.argv[2]:
+        print 
     # check if there's too many arguments
-    # check if the argument is .py file 
+    # check if the argument is .py file
 
 if __name__ == "__main__":
     main()

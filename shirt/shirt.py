@@ -19,11 +19,13 @@ def main():
 
         try:
             shirt = Image.open("shirt.png")
-            size = shirt.size
+            shirt_size = shirt.size
 
             muppet = Image.open(file)
+            muppet_size = muppet.size
+            print(muppet_size)
 
-            muppet.paste(shirt, size)
+            muppet.paste(shirt, shirt_size)
             muppet.save(second_file)
 
         except FileNotFoundError:

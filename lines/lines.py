@@ -15,17 +15,16 @@ def main():
 
         try:
             second_arg = sys.argv[2]
-            if second_argv:
+            if second_arg:
                 sys.exit('Too many command-line arguments')
         except IndexError:
-            print(command_line_arg.endswith('.py'))
+            if not command_line_arg.endswith('.py'):
+                sys.exit('Not a Python file')
+
+            
 
     except IndexError:
         sys.exit('Too few command-line arguments')
-
-
-    # check if there's too many arguments
-    # check if the argument is .py file
 
 if __name__ == "__main__":
     main()

@@ -3,9 +3,10 @@ import sys
 def main():
     try:
         file = sys.argv[1]
+        second_file = sys.argv[2]
 
         try:
-            second_arg = sys.argv[2]
+            second_arg = sys.argv[3]
             if second_arg:
                 sys.exit('Too many command-line arguments')
         except IndexError:
@@ -16,15 +17,7 @@ def main():
             with open(file, 'r') as f:
                 lines = f.readlines()
 
-            num_lines = 0
-            for line in lines:
-                line = line.lstrip(' ')
-                if line.startswith('#'):
-                    continue
-                elif line == '\n':
-                    continue
-                num_lines += 1
-            print(num_lines)
+            print('success')
 
         except FileNotFoundError:
             sys.exit('File does not exist')

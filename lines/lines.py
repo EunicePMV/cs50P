@@ -16,8 +16,9 @@ def main():
         # check if there's an argument
         if sys.argv[2]:
             sys.exit('Too many command-line arguments')
-        elif command_line_arg.endswith()
-    except ValueError:
+        elif command_line_arg.endswith('.py'):
+            print(command_line_arg.endswith('.py'))
+    except IndexError:
         sys.exit('Too few command-line arguments')
 
 

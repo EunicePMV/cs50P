@@ -8,7 +8,7 @@
 # exit: sys.exit
 
 def main():
-    ...
+    # get the user input in the command-line
 
 if __name__ == "__main__":
     main()

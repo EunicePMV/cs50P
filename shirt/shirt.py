@@ -21,6 +21,7 @@ def main():
             shirt_size = shirt.size
 
             muppet = Image.open(file)
+            cropped_muppet = muppet.
 
             # crop the muppet pict according to the shirt size
 

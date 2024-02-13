@@ -10,16 +10,17 @@
 import sys
 
 def main():
-    # get the user input in the command-line
-    print(sys.argv[1])
+    try:
+        command_line_arg = sys.argv[1]
 
-    # check if there's an argument
-    if sys.argv[2]:
-        sys.exit('Too many command-line arguments')
-    elif sys.argv[1] == None:
-        print(None)
+        # check if there's an argument
+        if sys.argv[2]:
+            sys.exit('Too many command-line arguments')
+        elif command_line_arg.endswith()
+    except ValueError:
+        sys.exit('Too few command-line arguments')
 
-        
+
     # check if there's too many arguments
     # check if the argument is .py file
 

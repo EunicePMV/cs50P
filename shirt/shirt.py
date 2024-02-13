@@ -18,10 +18,10 @@ def main():
 
         try:
             shirt = Image.open("shirt.png")
-            shirt_size = shirt.size
+            shirt_width, shirt_height = shirt.size
             shirt_mask = shirt.convert('RGBA')
 
-            muppet = Image.open(file).resize(shirt_size)
+            muppet = Image.open(file).crop((0, shirt_height, 0, shirt_width))
 
             muppet.paste(shirt, shirt_mask)
             muppet.save(second_file)

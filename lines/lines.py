@@ -26,11 +26,15 @@ def main():
                 lines = f.readlines()
 
             num_lines = 0
+            print(lines)
             for line in lines:
+                line = line.lstrip(' ')
+                print(line)
                 if line.startswith('#'):
+                    print('comment exist')
                     continue
-                elif line.startswith('"""'):
-                    continue 
+                # elif line.startswith('"""'):
+                #     continue
 
         except FileNotFoundError:
             sys.exit('File does not exist')

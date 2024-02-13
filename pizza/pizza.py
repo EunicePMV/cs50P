@@ -24,10 +24,13 @@ def main():
         sys.exit('Too few command-line arguments')
 
 def prettier(file):
-    spamreader = csv.reader(file, delimiter=',')
-    print(spamreader)
-    for row in spamreader:
+    reader = csv.DictReader(file)
+    for row in reader:
         print(row)
+    # spamreader = csv.reader(file, delimiter=',')
+    # print(spamreader)
+    # for row in spamreader:
+    #     print(row)
 
 if __name__ == "__main__":
     main()

@@ -17,11 +17,12 @@ def main():
                 sys.exit('Input and output have different extension')
 
         try:
-            shirt = Image.open("shirt.png")
-            shirt_width, shirt_height = shirt.size
-            shirt_mask = shirt.convert('RGBA')
+            muppet = Image.open(file)
+            muppet_size = muppet.size
 
-            muppet = Image.open(file).crop((0, shirt_height, 0, shirt_width))
+            shirt = Image.open("shirt.png")
+            shirt = shirt.resize(muppet_size)
+            shirt_mask = shirt.convert('RGBA')
 
             muppet.paste(shirt, shirt_mask)
             muppet.save(second_file)

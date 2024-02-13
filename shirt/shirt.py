@@ -19,10 +19,11 @@ def main():
         try:
             shirt = Image.open("shirt.png")
             shirt_size = shirt.size
+            # other way to s
             shirt_mask = shirt.convert('L')
 
-            muppet = Image.open(file)
-            # cropped_muppet = muppet.crop(shirt_size)
+            muppet = Image.open(file).resize(shirt_size)
+            muppet_size = muppet.size
 
             muppet.paste(shirt, shirt_mask)
             muppet.save(second_file)

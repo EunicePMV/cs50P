@@ -15,7 +15,11 @@ def main():
 
     # check if there's an argument
     if sys.argv[2]:
-        print 
+        sys.exit('Too many command-line arguments')
+    elif sys.argv[1] == None:
+        print(None)
+
+        
     # check if there's too many arguments
     # check if the argument is .py file
 

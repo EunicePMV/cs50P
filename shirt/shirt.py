@@ -22,9 +22,14 @@ def main():
             shirt_size = shirt.size
 
             muppet = Image.open(file)
+            muppet = muppet.crop(shirt_size)
+            muppet.save('crop.jpg')
 
-            muppet.paste(shirt, shirt_size)
-            muppet.save(second_file)
+            # crop the muppet pict according to the shirt size
+
+
+            # muppet.paste(shirt, shirt_size)
+            # muppet.save(second_file)
 
         except FileNotFoundError:
             sys.exit('Input does not exist')

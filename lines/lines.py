@@ -13,5 +13,9 @@ def main():
     # get the user input in the command-line
     print(sys.argv[1])
 
+    # check if there's an argument
+    # check if there's too many arguments
+    # check if the argument is .py file 
+
 if __name__ == "__main__":
     main()

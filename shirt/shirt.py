@@ -1,5 +1,6 @@
 import sys
 import os
+import Pillow
 
 def main():
     try:
@@ -16,15 +17,14 @@ def main():
             elif os.path.splitext(file) != os.path.splitext(second_file):
                 sys.exit('Input and output have different extension')
 
-        # try:
-        #     with open(file, newline='') as f:
-        #         clean_data_lst = csv_cleaner(f)
+        try:
+            shirt = Image.open("shirt.png")
+            size = shirt.size
 
-        #     with open(second_file, 'w', newline='') as f:
-        #         csv_write(f, clean_data_lst)
+            muppet = Image.open(file)
 
         except FileNotFoundError:
-            sys.exit('Could not read ' + file)
+            sys.exit('Input does not exist')
 
     except IndexError:
         sys.exit('Too few command-line arguments')

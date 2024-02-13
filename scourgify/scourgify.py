@@ -33,7 +33,7 @@ def csv_cleaner(file):
     for row in reader:
         fullname = row['name']
         house = row['house']
-        lastname, firstname = fullname.split(',')
+        lastname, firstname = fullname.split(',').strip()
         cleaned_data.append({'first name': firstname, 'last name': lastname, 'house':house})
     return cleaned_data
 

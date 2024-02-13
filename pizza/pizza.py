@@ -1,4 +1,5 @@
 import sys
+import csv
 
 def main():
     try:
@@ -13,7 +14,7 @@ def main():
                 sys.exit('Not a CSV file')
 
         try:
-            with open(file, 'r') as f:
+            with open(file, newline='') as f:
                 prettier(f)
 
         except FileNotFoundError:
@@ -23,7 +24,9 @@ def main():
         sys.exit('Too few command-line arguments')
 
 def prettier(file):
-    print(file.readlines())
+    spamreader = csv.reader(file, delimiter=',')
+    for row in spamreader:
+        print(', '.join(row))
 
 if __name__ == "__main__":
     main()

@@ -9,8 +9,8 @@ def main():
             if second_arg:
                 sys.exit('Too many command-line arguments')
         except IndexError:
-            if not file.endswith('.py'):
-                sys.exit('Not a Python file')
+            if not file.endswith('.csv'):
+                sys.exit('Not a CSV file')
 
         try:
             with open(file, 'r') as f:

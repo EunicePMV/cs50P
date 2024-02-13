@@ -6,7 +6,6 @@ def main():
     try:
         file = sys.argv[1]
         second_file = sys.argv[2]
-
         try:
             second_arg = sys.argv[3]
             if second_arg:
@@ -17,13 +16,17 @@ def main():
             elif os.path.splitext(file)[1] != os.path.splitext(second_file)[1]:
                 sys.exit('Input and output have different extension')
 
-        try:
-            shirt = Image.open("shirt.png")
-            shirt_size = shirt.size
+        print('success')
 
-            muppet = Image.open(file)
-            muppet = muppet.crop(shirt_size)
-            muppet.save('crop.jpg')
+        try:
+            print('success')
+
+            # shirt = Image.open("shirt.png")
+            # shirt_size = shirt.size
+
+            # muppet = Image.open(file)
+            # muppet = muppet.crop(shirt_size)
+            # muppet.save('crop.jpg')
 
             # crop the muppet pict according to the shirt size
 

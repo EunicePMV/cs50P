@@ -13,14 +13,15 @@ def main():
         except IndexError:
             if not second_file.endswith(('.jpg', '.jpeg', '.png')) or not file.endswith(('.jpg', '.jpeg', '.png')):
                 sys.exit('Invalid output')
-            elif second_file[-3:]
+            elif os.splitext(file) != os.splitext(second_file):
+                sys.exit('Input and output have different extension')
 
-        try:
-            with open(file, newline='') as f:
-                clean_data_lst = csv_cleaner(f)
+        # try:
+        #     with open(file, newline='') as f:
+        #         clean_data_lst = csv_cleaner(f)
 
-            with open(second_file, 'w', newline='') as f:
-                csv_write(f, clean_data_lst)
+        #     with open(second_file, 'w', newline='') as f:
+        #         csv_write(f, clean_data_lst)
 
         except FileNotFoundError:
             sys.exit('Could not read ' + file)

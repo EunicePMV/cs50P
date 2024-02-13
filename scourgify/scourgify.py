@@ -1,4 +1,5 @@
 import sys
+import csv
 
 def main():
     try:
@@ -14,14 +15,17 @@ def main():
                 sys.exit('Not a CSV file')
 
         try:
-            with open(file, 'r') as f:
-                lines = f.readlines()
+            with open(file, newline='') as f:
+                csv_cleaner(f)
 
         except FileNotFoundError:
             sys.exit('Could not read ' + file)
 
     except IndexError:
         sys.exit('Too few command-line arguments')
+
+def csv_reader(file):
+    reader = csv.DictReader(file)
 
 if __name__ == "__main__":
     main()

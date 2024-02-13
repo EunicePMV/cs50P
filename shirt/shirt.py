@@ -11,8 +11,9 @@ def main():
             if second_arg:
                 sys.exit('Too many command-line arguments')
         except IndexError:
-            if not second_file.endswith('.jpg') or not file.endswith('.jpg'):
+            if not second_file.endswith(('.jpg', '.jpeg', '.png')) or not file.endswith(('.jpg', '.jpeg', '.png')):
                 sys.exit('Invalid output')
+            elif second_file[-3:]
 
         try:
             with open(file, newline='') as f:

@@ -24,8 +24,10 @@ def main():
     except IndexError:
         sys.exit('Too few command-line arguments')
 
-def csv_reader(file):
+def csv_cleaner(file):
     reader = csv.DictReader(file)
+    for row in reader:
+        print(row)
 
 if __name__ == "__main__":
     main()

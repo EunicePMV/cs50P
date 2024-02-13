@@ -38,7 +38,7 @@ def csv_cleaner(file):
     return cleaned_data
 
 def csv_write(file, data):
-    fieldnames = ['first', 'last', 'house']
+    fieldnames = ['first name', 'last name', 'house']
     writer = csv.DictWriter(file, fieldnames=fieldnames)
     writer.writeheader()
     for row in data:

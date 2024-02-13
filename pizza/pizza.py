@@ -25,8 +25,9 @@ def main():
 
 def prettier(file):
     spamreader = csv.reader(file, delimiter=',')
+    print(spamreader)
     for row in spamreader:
-        print(', '.join(row))
+        print(row)
 
 if __name__ == "__main__":
     main()

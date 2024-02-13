@@ -22,6 +22,8 @@ def main():
             size = shirt.size
 
             muppet = Image.open(file)
+
+            photo = Image.new(mode=RGB, size)
             new_img = photo.paste(shirt, size)
             new_img.show()
 

@@ -21,8 +21,6 @@ def main():
                 line = line.lstrip(' ')
                 if line.startswith('#'):
                     continue
-                # elif line.startswith('"""'):
-                #     continue
                 elif line == '\n':
                     continue
                 num_lines += 1

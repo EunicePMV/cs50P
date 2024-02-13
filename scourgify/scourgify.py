@@ -16,12 +16,10 @@ def main():
 
         try:
             with open(file, newline='') as f:
-                clean_data_dict = csv_cleaner(f)
+                clean_data_lst = csv_cleaner(f)
 
-            print(clean_data_dict)
-
-            # with open(second_file, 'w', newline='') as f:
-            #     csv_write(f)
+            with open(second_file, 'w', newline='') as f:
+                csv_write(f, clean_data_lst)
 
         except FileNotFoundError:
             sys.exit('Could not read ' + file)
@@ -31,18 +29,20 @@ def main():
 
 def csv_cleaner(file):
     reader = csv.DictReader(file)
-    cleaned_data = {}
+    cleaned_data = []
     for row in reader:
         fullname = row['name']
         house = row['house']
         lastname, firstname = fullname.split(',')
-        cleaned_data = {**cleaned_data,  **{'first': firstname, 'last': lastname, 'house':house}}
+        cleaned_data.append({'first': firstname, 'last': lastname, 'house':house})
     return cleaned_data
 
-def csv_write(file):
+def csv_write(file, data):
     fieldnames = ['first', 'last', 'house']
     writer = csv.DictWriter(file, fieldnames=fieldnames)
     writer.writeheader()
+    for row in data:
+        writer.writerow(row)
 
 if __name__ == "__main__":
     main()

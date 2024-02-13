@@ -22,7 +22,8 @@ def main():
             shirt_size = shirt.size
 
             muppet = Image.open(file)
-            muppet = muppet.resize(shirt_size)
+
+            mask = Image.new()
 
             muppet.paste(shirt, shirt_size)
             muppet.save(second_file)

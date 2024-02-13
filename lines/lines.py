@@ -6,3 +6,9 @@
 #   - does not end in .py
 #   - file does not exist
 # exit: sys.exit
+
+def main():
+    ...
+
+if __name__ == "__main__":
+    main()

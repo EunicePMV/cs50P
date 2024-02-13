@@ -21,11 +21,7 @@ def main():
             shirt = Image.open("shirt.png")
             shirt_size = shirt.size
 
-            shirt = erode(12, shirt)
-
             muppet = Image.open(file)
-            muppet_size = muppet.size
-            print(muppet_size)
 
             muppet.paste(shirt, shirt_size)
             muppet.save(second_file)

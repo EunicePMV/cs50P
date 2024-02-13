@@ -23,12 +23,6 @@ def main():
 
             muppet = Image.open(file)
             muppet = ImageOps.fit(muppet, shirt_size)
-            # muppet = Image.open(file)
-            # muppet_width, muppet_height = muppet.size
-
-            # height_diff = muppet_height - shirt_height
-            # muppet.crop((0, height_diff, 0, shirt_height))
-
 
             muppet.paste(shirt, shirt_mask)
             muppet.save(second_file)

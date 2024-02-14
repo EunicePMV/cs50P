@@ -22,7 +22,7 @@ def main():
     print(validate(input("IPv4 Address: ").strip()))
 
 def validate(ip):
-    ip_address = re.match(r"[000-255]+\.[000-255]+\.[000-255]+\.[000-255]$", ip)
+    ip_address = re.match(r"([000-255]+)\.([000-255]+)\.([000-255]+)\.([000-255])", ip)
     ip_address.groups()
     # ^[0-255]+\.[0-255]+\.[0-255]+\.[0-255]$ -> first trial
     # if re.search(r"[000-255]+\.[000-255]+\.[000-255]+\.[000-255]$", ip):

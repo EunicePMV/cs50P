@@ -11,6 +11,12 @@ import sys
 # $   matches the end of the string or just before the newline at the end of the string
 # []    set of characters
 # [^]   complementing the set
+# \d    decimal digit
+# \D    not a decimal digit
+# \s    whitespace characters
+# \S    not a whitespace character
+# \w    word character, as well as numbers and the underscore
+# \W    not a word character
 
 def main():
     print(validate(input("IPv4 Address: ")))

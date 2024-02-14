@@ -28,7 +28,7 @@ def main():
 #   - only has numbers
 #   - no other special characters other than "dot"
 def validate(ip):
-    if re.search(r"^[0-255]\.[0-255]\.[0-255]\.[0-255]", ip):
+    if re.search(r"^[0-255]+\.[0-255]+\.[0-255]+\.[0-255]", ip):
         return True
     else:
         return False

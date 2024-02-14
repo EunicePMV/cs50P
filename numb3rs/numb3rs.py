@@ -23,7 +23,7 @@ def main():
 
 def validate(ip):
     # ^[0-255]+\.[0-255]+\.[0-255]+\.[0-255]$ -> first trial
-    if re.search(r"^[0-255^.]+\.[0-255^.]+\.[0-255^.]+\.[0-255^.]$", ip):
+    if re.search(r"^[000-255^.]+\.[000-255^.]+\.[000-255^.]+\.[000-255^.]$", ip):
         return True
     else:
         return False

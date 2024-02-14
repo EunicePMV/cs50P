@@ -26,8 +26,9 @@ def main():
 def parse(s):
     s = s.strip()
     # get the src link
-    matches = re.search(r"^(<iframe \w) (src=\"http\")", s, re.IGNORECASE)
-    matches.group()
+    # http://www.youtube.com/embed/xvFZjo5PgG0
+    matches = re.search(r"^(<iframe \w) (src=\"https?://(www\.)?youtube\.com/embed/\w\) \w><iframe>$")", s, re.IGNORECASE)
+    matches.group(1)
 
 
 

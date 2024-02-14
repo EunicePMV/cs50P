@@ -10,7 +10,7 @@ def main():
 #   - ranging from 0-255
 #   - only has 3 dots (255.255.255.255)
 #   - only has numbers
-#   - 
+#   - no other special characters other than "dot"
 def validate(ip):
     ...
 

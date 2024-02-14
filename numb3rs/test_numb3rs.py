@@ -13,6 +13,9 @@ def test_special_characters():
 def test_range_num():
     assert validate('512.512.512.512') == False
     assert validate('275.28.1.10') == False
+    assert validate('28.278.1.10') == False
+    assert validate('28.1.278.10') == False
+    assert validate('28.1.10.278') == False
 
 def test_length_address():
     assert validate('255.255.255.255.255') == False

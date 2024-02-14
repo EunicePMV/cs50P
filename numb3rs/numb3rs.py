@@ -19,7 +19,7 @@ import sys
 # \W    not a word character
 
 def main():
-    print(validate(input("IPv4 Address: ")))
+    print(validate(input("IPv4 Address: ").strip()))
 
 
 # in the ip address should be the following:
@@ -28,7 +28,7 @@ def main():
 #   - only has numbers
 #   - no other special characters other than "dot"
 def validate(ip):
-    ...
+    if re.search(r"")
 
 
 ...

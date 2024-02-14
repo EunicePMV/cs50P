@@ -23,7 +23,6 @@ def main():
 
 def validate(ip):
     # ^[0-255]+\.[0-255]+\.[0-255]+\.[0-255]$ -> first trial
-    # ^(\d|1\d)
     if re.search(r"^((25[0-5]|(2[0-4]|1\d|[1-9]|)\d)\.?\b){4}$", ip):
         return True
     else:

@@ -9,7 +9,7 @@ def main():
 def parse(s):
     s = s.strip()
     # get the src link
-    matches = re.search(r"^(src)=\"(.)\"$", s)
+    matches = re.search(r"^(src)=\"(.)\"$", s, re.IGNORECASE)
     matches.group()
 
 

@@ -25,14 +25,21 @@ def main():
 
 def parse(s):
     s = s.strip()
-    # get the src link
-    # http://www.youtube.com/embed/xvFZjo5PgG0
-    matches = re.search(r"^(<iframe \w) (src=\"https?://(www\.)?youtube\.com/embed/\w\) \w><iframe>$")", s, re.IGNORECASE)
-    matches.group(1)
+    yt_pattern = r"\"https?\:\/\/(www\.)?youtube\.com\/embed\/.*?\""
+    matches = re.search(yt_pattern, s)
+    if matches:
+         shorten_link = convert(matches.group())
+         return shorten_link
+    else:
+        return None
 
-
-
-...
+def convert(link):
+    replace_pattern = r"(youtube\.com\/embed\/)(\w*)"
+    matches_link = re.search(replace_pattern, link)
+    if matches_link:
+        grp_link = list(matches_link.group(1, 2))
+        shorten_link = 'https://youtu.be/' + grp_link[-1]
+        return shorten_link
 
 
 if __name__ == "__main__":

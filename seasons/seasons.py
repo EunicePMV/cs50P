@@ -11,7 +11,7 @@ def get_mins(birthdate):
         birthdate = date.fromisoformat(birthdate)
         current_date = date.today()
         age = current_date - birthdate
-        total_mins = round(age.total_seconds() / 60)
+        total_mins = round(age.days * 24 * 60)
 
         p = inflect.engine()
         word_mins = p.number_to_words(total_mins)

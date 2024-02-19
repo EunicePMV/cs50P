@@ -14,7 +14,7 @@ def count(s):
     # match the string if walang katabing character
     sub_pattern = r"\bum\b"
     found = re.findall(sub_pattern, s)
-    return found
+    return len(found)
 
 
 if __name__ == "__main__":

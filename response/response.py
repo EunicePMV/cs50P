@@ -7,8 +7,11 @@ def main():
 def validate(s):
     try:
         valid = validators.email(s)
-        return valid
-    except ValueError or errors.EmptyValueError:
+        if valid:
+            return True
+        else:
+            return False
+    except (ValueError, errors.EmptyValueError, errors.):
         return False
 
 

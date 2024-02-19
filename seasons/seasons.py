@@ -15,7 +15,7 @@ def get_mins(birthdate):
         total_mins = round(age.days * 24 * 60)
 
         p = inflect.engine()
-        word_mins = p.number_to_words(total_mins).capitalize()
+        word_mins = p.number_to_words(total_mins, andword='').capitalize()
         print(f'{word_mins} minutes')
     except ValueError:
         sys.exit('Invalid date')

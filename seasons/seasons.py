@@ -10,7 +10,7 @@ def get_mins(birthdate):
         # check if input is valid
         birthdate = date.fromisoformat(birthdate)
         current_date = date.today()
-        age = current_date - birthdate
+        age = abs(current_date - birthdate)
         # delta = timedelta(days=age)
         print(age.minutes)
     except ValueError:

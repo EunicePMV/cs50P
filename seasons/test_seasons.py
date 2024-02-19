@@ -2,7 +2,7 @@ import pytest
 from seasons import get_mins
 from datetime import date
 
-TEST_DATE = date.fromisoformat("2000-01-01")
+TEST_DATE = "2000-01-01"
 
 def test_valid_date():
     with pytest.raises(ValueError) as error:

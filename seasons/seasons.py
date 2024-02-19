@@ -9,7 +9,8 @@ def get_mins(birthdate):
     try:
         # check if input is valid
         birthdate = date.fromisoformat(birthdate)
-        print(birthdate)
+        current_date = date.today
+        print(current_date)
     except ValueError:
         sys.exit('Invalid date')
 

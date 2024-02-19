@@ -17,7 +17,6 @@ def get_mins(birthdate, test_date=None):
         word_mins = p.number_to_words(total_mins, andword='').capitalize()
         return f'{word_mins} minutes'
     except ValueError:
-        # raise ValueError("Invalid date")
         sys.exit('Invalid date')
 
 

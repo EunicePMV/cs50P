@@ -8,11 +8,10 @@ def main():
 def get_mins(birthdate):
     try:
         # check if input is valid
-        date.fromisoformat(birthdate)
+        birthdate = date.fromisoformat(birthdate)
+        print(birthdate)
     except ValueError:
         sys.exit('Invalid date')
-
-
 
 
 if __name__ == "__main__":

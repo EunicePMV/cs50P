@@ -6,7 +6,10 @@ def main():
 
 def validate(s):
     valid = checkers.is_email(s)
-    return valid
+    if valid:
+        return "Valid"
+    else:
+        return "Invalid"
 
 if __name__ == "__main__":
     main()

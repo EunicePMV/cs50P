@@ -1,22 +1,21 @@
-from datetime import date, timedelta
+from datetime import date
 import sys, inflect
 
 
 def main():
-    get_mins(input('Date of Birth: '))
+    print(get_mins(input('Date of Birth: ')))
 
-def get_mins(birthdate):
+def get_mins(birthdate, test_date=None):
     try:
         # check if input is valid
         birthdate = date.fromisoformat(birthdate)
-        current_date = date.today()
-        # current_date = date.fromisoformat('2000-01-01')
+        current_date = date.fromisoformat(test_date) if test_date else date.today()
         age = current_date - birthdate
         total_mins = round(age.days * 24 * 60)
 
         p = inflect.engine()
         word_mins = p.number_to_words(total_mins, andword='').capitalize()
-        print(f'{word_mins} minutes')
+        return f'{word_mins} minutes'
     except ValueError:
         sys.exit('Invalid date')
 

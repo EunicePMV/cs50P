@@ -18,3 +18,12 @@ def test_invalid_format():
     with pytest.raises(ValueError) as error:
         convert('9 AM - 5 PM')
     assert error.type is ValueError
+
+def test_out_of_range():
+    with pytest.raises(ValueError) as error:
+        convert('09:60 AM to 5 PM')
+    assert error.type is ValueError
+
+    with pytest.raises(ValueError) as error:
+        convert('9 AM to 5:60 PM')
+    assert error.type is ValueError

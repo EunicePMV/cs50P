@@ -1,6 +1,6 @@
 class Jar:
     def __init__(self, capacity=12):
-        if capacity is int:
+        if isinstance(capacity, int):
             self.capacity = capacity
         else:
             raise ValueError
@@ -22,4 +22,4 @@ class Jar:
     def size(self):
         ...
 
-jar = Jar(12)
+jar = Jar(capacity=-1)

@@ -11,8 +11,11 @@ def get_mins(birthdate):
         birthdate = date.fromisoformat(birthdate)
         current_date = date.today()
         age = current_date - birthdate
-        total_mins = age.total_seconds() / 60
-        print(total_mins)
+        total_mins = round(age.total_seconds() / 60)
+
+        p = inflect.engine()
+        word_mins = p.number_to_words(total_mins)
+        print(f'{word_mins} minutes')
     except ValueError:
         sys.exit('Invalid date')
 

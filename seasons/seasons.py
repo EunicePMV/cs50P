@@ -3,10 +3,14 @@ import sys, inflect
 
 
 def main():
-    print(get_mins(input('Date of Birth: ')))
+    get_mins(input('Date of Birth: ')))
 
 def get_mins(birthdate):
-    # check if input is valid
+    try:
+        # check if input is valid
+        date.fromisoformat(birthdate)
+    except ValueError:
+        return "Invalid date"
 
 
 

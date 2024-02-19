@@ -1,4 +1,5 @@
 from datetime import date
+import sys, inflect
 
 
 def main():
@@ -6,7 +7,7 @@ def main():
 
 def get_mins(birthdate):
     # check if input is valid
-    
+
 
 
 

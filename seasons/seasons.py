@@ -12,7 +12,7 @@ def get_mins(birthdate):
         current_date = date.today()
         age = current_date - birthdate
         # delta = timedelta(days=age)
-        print(age)
+        print(age.days)
     except ValueError:
         sys.exit('Invalid date')
 

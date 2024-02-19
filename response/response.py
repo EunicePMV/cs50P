@@ -1,19 +1,12 @@
-from validator_collection import validators, errors
+from validator_collection import checkers
 
 def main():
     print(validate(input("What's your email address? ")))
 
 
 def validate(s):
-    try:
-        valid = validators.email(s)
-        if valid:
-            return True
-        else:
-            return False
-    except (ValueError, errors.EmptyValueError, errors.):
-        return False
-
+    valid = checkers.is_email(s)
+    return valid
 
 if __name__ == "__main__":
     main()

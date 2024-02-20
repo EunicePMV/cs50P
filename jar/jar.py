@@ -1,6 +1,6 @@
 class Jar:
     def __init__(self, capacity=12):
-        if not isinstance(capacity, int) and not capactiy <= 0:
+        if not isinstance(capacity, int) or not capactiy <= 0:
             raise ValueError
 
     def __str__(self):
@@ -20,4 +20,4 @@ class Jar:
     def size(self):
         ...
 
-print(not isinstance(-1, int))
+print(not isinstance('string', int))

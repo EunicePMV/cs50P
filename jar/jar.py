@@ -1,6 +1,6 @@
 class Jar:
     def __init__(self, capacity=12):
-        self._capacity = capacity
+        self.capacity = capacity
         self.size = 0
 
     def __str__(self):
@@ -33,9 +33,15 @@ class Jar:
 
     @property
     def size(self):
-        return self.size
+        return self._size
+
+    @size.setter
+    def size(self, size):
+        if size < 0 or size > self.capacity:
+            raise ValueError("Invalid size number")
+        self._size = size
 
 jar = Jar()
-jar.deposit(13)
-print(jar)
-print(jar.capacity)
+jar.deposit(2)
+# print(jar)
+# print(jar.capacity)

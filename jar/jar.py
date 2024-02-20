@@ -5,7 +5,7 @@ class Jar:
 
     def __str__(self):
         cookies = ''
-        for n in range(self.cookies):
+        for n in range(self.size):
             cookies += '🍪'
         return cookies
 
@@ -42,6 +42,7 @@ class Jar:
         self._size = size
 
 jar = Jar()
-jar.deposit(2)
-# print(jar)
-# print(jar.capacity)
+jar.deposit(10)
+print(jar)
+print(jar.capacity)
+jar.withdraw(10)

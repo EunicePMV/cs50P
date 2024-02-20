@@ -2,7 +2,7 @@ class Jar:
     def __init__(self, capacity=12):
         if not isinstance(capacity, int) or capacity <= 0:
             raise ValueError
-        self._capacity = capacity
+        self.capacity = capacity
         self.cookies = 0
 
     def __str__(self):
@@ -28,4 +28,5 @@ class Jar:
     def size(self):
         ...
 
-jar = Jar()
+jar = Jar(12)
+print(jar.capacity)

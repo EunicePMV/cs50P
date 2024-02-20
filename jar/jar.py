@@ -5,7 +5,7 @@ class Jar:
 
     def __str__(self):
         cookies = ''
-        for n in self.cookies:
+        for n in range(self.cookies):
             cookies += '🍪'
         return cookies
 
@@ -13,7 +13,7 @@ class Jar:
         if self.cookies + n <= self.capacity:
             self.cookies += n
         else:
-            raise ValueError
+            raise ValueError("Reached maximum capacity")
 
     def withdraw(self, n):
         ...
@@ -25,7 +25,7 @@ class Jar:
     @capacity.setter
     def capacity(self, capacity):
         if not isinstance(capacity, int) or capacity <= 0:
-            raise ValueError
+            raise ValueError("Capacity should be positive integer")
         self._capacity = capacity
 
     @property
@@ -33,6 +33,6 @@ class Jar:
         ...
 
 jar = Jar()
-jar.deposit(3)
-
+jar.deposit(13)
+print(jar)
 print(jar.capacity)

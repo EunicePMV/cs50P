@@ -1,9 +1,6 @@
 class Jar:
     def __init__(self, capacity=12):
-        if not isinstance(capacity, int) or capacity <= 0:
-            raise ValueError
-        self.capacity = capacity
-        self.cookies = 0
+        self._capacity = capacity
 
     def __str__(self):
         cookies = ''
@@ -20,9 +17,10 @@ class Jar:
     def withdraw(self, n):
         ...
 
-    @property
+    @capacity.setter
     def capacity(self):
-        ...
+        if not isinstance(capacity, int) or capacity <= 0:
+            raise ValueError
 
     @property
     def size(self):

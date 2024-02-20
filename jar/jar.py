@@ -17,6 +17,10 @@ class Jar:
     def withdraw(self, n):
         ...
 
+    @property
+    def capacity(self):
+        return self._capacity
+
     @capacity.setter
     def capacity(self, capacity):
         if not isinstance(capacity, int) or capacity <= 0:
@@ -27,5 +31,5 @@ class Jar:
     def size(self):
         ...
 
-jar = Jar(12)
+jar = Jar()
 print(jar.capacity)

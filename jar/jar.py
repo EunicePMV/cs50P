@@ -33,4 +33,6 @@ class Jar:
         ...
 
 jar = Jar()
+jar.deposit(3)
+
 print(jar.capacity)

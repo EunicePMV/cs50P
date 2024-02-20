@@ -16,7 +16,7 @@ class Jar:
             raise ValueError("Reached maximum capacity")
 
     def withdraw(self, n):
-        if self.size - n < self.capacity:
+        if n > self.size or n > self.capacity:
             raise ValueError("Not enough cookies")
         else:
             self.size -= n
@@ -45,4 +45,5 @@ jar = Jar()
 jar.deposit(10)
 print(jar)
 print(jar.capacity)
-jar.withdraw(10)
+jar.withdraw(5)
+print(jar)

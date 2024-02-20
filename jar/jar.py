@@ -16,7 +16,7 @@ class Jar:
             raise ValueError("Reached maximum capacity")
 
     def withdraw(self, n):
-        ...
+        for sel
 
     @property
     def capacity(self):

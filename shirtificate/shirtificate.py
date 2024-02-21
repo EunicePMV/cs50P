@@ -5,7 +5,7 @@ from fpdf import FPDF
 pdf = FPDF(orientation="P", format="A4")
 pdf.add_page()
 pdf.set_font("helvetica", size=12)
-pdf.cell(0, 10, "CS50 Shirtificate")
+pdf.cell(text="CS50 Shirtificate", center=True)
 # # add center text for header
 # pdf.image("shirtificate.png")
 pdf.output("shirtificate.pdf")

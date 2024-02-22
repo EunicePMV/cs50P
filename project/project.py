@@ -1,5 +1,5 @@
 # functions must be accompanied with tests
-# 
+# have requirements.txt
 
 def main():
     ...

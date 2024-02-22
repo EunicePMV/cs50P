@@ -1,3 +1,6 @@
+# functions must be accompanied with tests
+# 
+
 def main():
     ...
 

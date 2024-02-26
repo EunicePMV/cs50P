@@ -11,7 +11,7 @@ The project is about generating electronic invoice using the customer informatio
     - <div style='text-align: justify;'> The file contains the main function including the other functions that helps to facilitate the goal to generate an electronic invoice. Upon execution, it will generate a "rendered.html" file that rendered customer data, and additionally generates an "invoice.pdf", which converts the html file to pdf format. The two mentioned files remained in the folder, serving as examples for viewing purposes, showcasing outputs generated during development.
     </div>
 2. test_project.py
-    - <div style='text-align: justify;'> The file contains the three test functions of the "project.py", namely organized_data(), get_date() and get_total(). The test_organized_data() assessed the function that accepts two list that compose of the customer information and order and convert into dict data type. 
+    - <div style='text-align: justify;'> The file contains the three test functions of the "project.py", namely organized_data(), get_date() and get_total(). The test_organized_data() assessed the function that accepts two list that compose of the customer information and order and convert into dictionary data type. test_get_date() assessed the function to return correct due date according to the issuance date invoice, the passing of the issued_date is only done to test if it will output correct due date. Lastly, the test_get_total() assessed the function that gets the total amount to be paid in the dictionary data type that composed of the products of the customer, based on the quantity of item ordered.
     </div>
 
 

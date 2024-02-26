@@ -1,6 +1,7 @@
 # Invoice Generator
 #### Video Demo: <URL HERE>
 #### Description:
+The project is all about 
 
 <!-- what project is -->
 

@@ -16,7 +16,7 @@
 </div>
 <br/>
 <div style='text-align: justify;'>
-    In summary, the project aimed to streamline the manual generation of invoices that will benefit businesses mostly small enterprices to facilitate the process of customer's invoice that will be more accurate and efficient, potentially leading to increase in sales and fostering greater customer loyalty.
+    In summary, the project aimed to streamline the manual generation of invoices that will benefit businesses mostly small enterprices to facilitate the process of customer's invoice that will be more accurate and efficient, potentially leading to increase in sales and fostering greater customer loyalty. In essence, the automation enhance customer satisfaction and operational efficiency constributes to the growth that lead for more success in their business ventures.
 </div>
 
 ## Content of Each File

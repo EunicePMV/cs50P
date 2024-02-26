@@ -8,5 +8,9 @@ The project is about generating electronic invoice using the customer informatio
 <!-- explain files i wrote for hte project contains and does -->
 ## Content of Each File
 <div>
-
+project.py
+    - rendered.html
+    - invoice.pdf
+test_project.py
+/templates/invoice.html
 </div>

@@ -4,12 +4,17 @@
 
 #### Description:
 <div style='text-align: justify;'>
-    Generating accurate and timely invoices are crucial for companies, as one incorrect information can potentially lead to significant problems. Erros may cause confusion or suspicion from customers that may lead to lost of their loyalty. Hence, it will be a great help to automate invoice generation proces that is more efficient and flawless. In the project, customer details should be entered and the application would fill the invoice and do the calculations for the total amount needs to be paid.
+    Generating accurate and timely invoices are crucial for companies, as one incorrect information can potentially lead to significant problems. Errors may cause confusion or suspicion from customers that may lead to lost of their loyalty. Hence, it will be a great help to automate invoice generation proces that is more efficient and flawless. In the project, customer details should be entered and the application would fill the invoice and do the calculations for the total amount needs to be paid.
 </div>
 <br/>
 <div style='text-align: justify;'>
     The invoice generator first prompts the user to enter the customer information such as name, address, and product details (name, quantity, price). Afterwards, generate invoice in PDF format, presenting customer's information and purchased items in a table format. Additionally, like other invoice includes total amount due and important dates like issuance and deadline, that were set to be paid after three months.
 </div>
+<br/>
+<div style='text-align: justify;'>
+    In the development process of the project Jinja2 and weasyprint are utilized 
+</div>
+
 
 <!--
 problem in  generating invoice -> manual

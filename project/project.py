@@ -29,7 +29,6 @@ def main():
 
     total = get_total(order_data)
     order_data['total'] = total
-    print(order_data)
 
     order_json = json.dumps(order_data)
 

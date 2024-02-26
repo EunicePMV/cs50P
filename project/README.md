@@ -12,7 +12,7 @@
 </div>
 <br/>
 <div style='text-align: justify;'>
-    In the development process of the project Jinja2 and weasyprint are utilized 
+    In the development process of the project both Jinja2 and WeasyPrint were utilized. Jinja2 was used to structure the invoice template to render customer data in the HTML file dynamically, it filled the template with the data entered by the user.
 </div>
 
 

@@ -4,6 +4,8 @@
 
 #### Description:
 <div style='text-align: justify;'>
+Generation of invoice for companies is crucial that should be delivered on time and accurately, one incorrect information may lead to further conflicts that may cause massive problem to the business. Errors may cause confusion and suspicions to the customer that may lead to lost of loyal customers. 
+
 The project is about generating electronic invoice using the customer information such as name, address, product details (name, quantity, price), total amount due and important dates like issuance and due.
 </div>
 <!--

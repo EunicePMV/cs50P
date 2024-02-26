@@ -7,10 +7,9 @@ The project is about generating electronic invoice using the customer informatio
 
 <!-- explain files i wrote for hte project contains and does -->
 ## Content of Each File
-> 1. project.py
->> <div style='text-align: justify;'>
->> The file contains the main function including the other function that help to facilitate the goal to generate an electronic invoice
->> </div>
+1. project.py
+    - <div style='text-align: justify;'> The file contains the main function including the other function that help to facilitate the goal to generate an    electronic invoice. 
+    </div>
 
 <!-- project.py
     - rendered.html

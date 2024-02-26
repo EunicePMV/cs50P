@@ -6,6 +6,11 @@
 <div style='text-align: justify;'>
 The project is about generating electronic invoice using the customer information such as name, address, product details (name, quantity, price), total amount due and important dates like issuance and due.
 </div>
+<!--
+problem in  generating invoice -> manual
+proposed solution
+tackle: jinja2 and weasyprint?
+ -->
 <!-- dagdag sa proj descp -->
 
 ## Content of Each File

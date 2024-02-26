@@ -1,8 +1,7 @@
 # Invoice Generator
 #### Video Demo: <URL HERE>
 #### Description:
-The project is all about generating invoice to the provided customer details such as name, address, product name, product quantity, product price and the total to be payed, including the issued date and due date.
-
-<!-- what project is -->
+The project is about generating electronic invoice using the customer information such as name, address, product details (name, quantity, price), total amount due and important dates like issuance and due.
 
 <!-- explain files i wrote for hte project contains and does -->
+### Content of Each File

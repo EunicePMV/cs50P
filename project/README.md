@@ -11,9 +11,10 @@ The project is about generating electronic invoice using the customer informatio
     - <div style='text-align: justify;'> The file contains the main function including the other functions that helps to facilitate the goal to generate an electronic invoice. Upon execution, it will generate a "rendered.html" file that rendered customer data, and additionally generates an "invoice.pdf", which converts the html file to pdf format. The two mentioned files remained in the folder, serving as examples for viewing purposes, showcasing outputs generated during development.
     </div>
 2. test_project.py
-    - <div style='text-align: justify;'> The file contains the three testing functions for the "project.py" - organized_data(), get_date() and get_total(). In test_organized_data(), verifies the function that accepts two list that compose of the customer information and order and convert into dictionary data type. In test_get_date() verifies the accuracy of the function in returning the due date according to the issuance date; the issuance_date parameter is provided solely for testing purposes onlt 
-
-    the function to return correct due date according to the issuance date invoice, the passing of the issued_date is only done to test if it will output correct due date. Lastly, the test_get_total() assessed the function that gets the total amount to be paid in the dictionary data type that composed of the products of the customer, based on the quantity of item ordered.
+    - <div style='text-align: justify;'> The file contains the three testing functions for the "project.py" - organized_data(), get_date() and get_total(). In test_organized_data(), it verifies the function that accepts two list that compose of the customer information and order which combined and convert lists into one dictionary data type. In test_get_date(), it verifies the accuracy of the function in returning the due date according to the issuance date; the issuance_date parameter is provided solely for testing purposes only to validate the correct due date output. Lastly, the test_get_total() verifies the function that gets the total amount to be paid in the dictionary data type that composed of the products of the customer, considering the quantity of items ordered.
+    </div>
+3. ./templates/invoice.html
+    - <div style='text-align: justify;'> The file contains the template of the invoice where syntax are based on Jinja2 to be able to render data dynamically, to be filled when the "project.py" is run that will ask the user about the customer details.
     </div>
 
 

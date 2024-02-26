@@ -14,6 +14,9 @@
 <div style='text-align: justify;'>
     In the development process of the project, both Jinja2 and WeasyPrint were utilized. Jinja2 was used to structure the invoice template to render customer data dynamically within the HTML file. It populated the template with the data entered by the user, and afterward, saved the HTML file that includes the customer information. The WeasyPrint was used to convert HTML file into PDF format that way it can be saved and forwarded to the designated customer.
 </div>
+<div style='text-align: justify;'>
+    As a summary, the project addressed the manual generation of invoices that will benefits businesses mostly small enterprices 
+</div>
 
 ## Content of Each File
 1. project.py
@@ -28,5 +31,5 @@
 
 3. templates/invoice.html
 - <div style='text-align: justify;'>
-    The file contains the invoice template, where data is structured using Jinja2 syntax to be able to render data dynamically. When "project.py" is executed, it prompts user for customer details, which are then populated into the template
+    The file contains the invoice template, where data is structured using Jinja2 syntax to be able to render data dynamically. When "project.py" is executed, it prompts user for customer details, which are then populated into the template.
 </div>
